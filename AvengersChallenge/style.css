@@ -1,0 +1,58 @@
+        body {
+            background-image: url("Avengers.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        
+        #navbar 
+        {
+            color: white;
+            font-size: 25px;
+        }
+
+        h1 
+        {
+            color: white;
+            font-size: 50px;
+            font-family: 'Arial';
+            margin-left: 50px;
+        }
+        
+        #CharacterDescription 
+        {
+            color: white;
+            -webkit-text-stroke: px white;
+            font-size: 15px;
+            font-family: 'Arial';
+            margin-left: 50px;
+        }
+        
+        #AvengersDescription
+        {
+            color: white;
+            -webkit-text-stroke: px white;
+            font-size: 15px;
+            font-family: 'Arial';
+            margin-left: 50px;
+        }
+
+        .align 
+        {
+            position: absolute;
+            leftt: 0px;
+            bottom: 0px;
+          }
+          #footerAvengers
+          {
+            position:absolute;
+            left: 3%;
+            padding: 3px;
+
+          }
+          #footerCap
+          {
+            position:absolute;
+            left: 3%;
+            padding: 3px;
+
+          }
