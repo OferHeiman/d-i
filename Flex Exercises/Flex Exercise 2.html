@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 2 Flex Exercise 2</title>
+    <style>
+.container
+{
+    padding: 5px;
+   border: 3px solid red;
+   height: 300px;
+   width: 500px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+}
+.box1
+{
+   background-color: blue;
+   width: 100%;
+   height: 10%;
+   color: white;
+   text-align: center;
+   display: flex;  
+   justify-content: center;  
+   align-items: center;
+
+}
+.box2
+{
+   width: 25%;
+   height: 200px;
+   background-color: blue;
+   color: white;
+   text-align: center;
+   align-self: flex-end;
+      
+   display: flex;  
+   justify-content: center;  
+   align-items: center;
+   
+}
+.box3
+{
+   background-color: blue;
+   width: 100%;
+   height: 10%;
+   color: white;
+   text-align: center;
+   align-self: space-around;
+   display: flex;  
+   justify-content: center;  
+   align-items: center;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1"> 1</div>
+        <div class="box2"> 2</div>
+        <div class="box3"> 3</div>
+    </div>
+</body>
+
+</html>
