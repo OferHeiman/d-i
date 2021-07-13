@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 2 Day 1 Exercise 1</title>
+    <style>
+        .block{
+            display: grid;
+            width: 500px;
+            height: 500px;
+            grid-gap: 5px;
+            grid-template-areas: 
+            "red1 blue1 blue1"
+            "red2 blue2 blue2"
+            "red3 blue3 blue3"
+            "yellowbox yellowbox yellowbox" ;
+        }
+        .red1{
+            background-color: red;
+            grid-area: red1;
+        }
+        .red2{
+            background-color: red;
+            grid-area: red2;
+        }
+        .red3{
+            background-color: red;
+            grid-area: red3;
+        }
+        .blue1{
+            background-color: blue;
+            grid-area: blue1;
+        }
+        .blue2{
+            background-color: blue;
+            grid-area: blue2;
+        }
+        .blue3{
+            background-color: blue;
+            grid-area: blue3;
+        }
+        .yellowbox{
+            background-color: yellow;
+            grid-area: yellowbox;
+        }
+    </style>
+</head>
+<body>
+<div style="border: 3px solid black; padding: 50px;" class="block">
+    <div style="border: 3px solid black" class="red1">red</div>
+    <div style="border: 3px solid black" class="red2">red</div>
+    <div style="border: 3px solid black" class="red3">red</div>
+    <div style="border: 3px solid black" class="blue1">blue</div>
+    <div style="border: 3px solid black" class="blue2">blue</div>
+    <div style="border: 3px solid black" class="blue3">blue</div>
+    <div style="border: 3px solid black" class="yellowbox">yellow</div>
+</div>
+</body>
+</html>
