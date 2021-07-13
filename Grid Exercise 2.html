@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 2 Day 1 Exercise 2</title>
+    <style>
+        .block{
+            display: grid;
+            width: 500px;
+            height: 500px;
+            grid-gap: 5px;
+            grid-template-areas: 
+            "header header header"
+            "hero mc mc"
+            "hero mc mc"
+            "sidebar mc mc" 
+            "sidebar ec ec"
+            "ri ri rp"
+            "footer footer footer"
+            ;
+        }
+        .header{
+            
+            background-color: aqua;
+            grid-area: header;
+        }
+        .hero{
+            background-color: plum;
+            grid-area: hero;
+        }
+        .mc{
+            background-color: darkkhaki;
+            grid-area: mc;
+        }
+        .sidebar{
+            background-color: green;
+            grid-area: sidebar;
+        }
+        .ec{
+            background-color: grey;
+            grid-area: ec;
+        }
+        .ri{
+            background-color: greenyellow;
+            grid-area: ri;
+        }
+        .rp{
+            background-color: pink;
+            grid-area: rp;
+        }
+        .footer{
+            background-color: orange;
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+<div class="block">
+    <div align="center" class="header">header</div>
+    <div align="center" class="hero">hero</div>
+    <div align="center" class="mc">Main Content</div>
+    <div align="center" class="sidebar">sidebar</div>
+    <div align="center" class="ec">Extra Content</div>
+    <div align="center" class="ri">Related Images</div>
+    <div align="center" class="rp">Related Posts</div>
+    <div align="center" class="footer">footer</div>
+</div>
+</body>
+</html>
