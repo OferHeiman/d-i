@@ -1,0 +1,21 @@
+h3 {                           /* Selector */
+    color: blue;                   /* Declaration 1 */
+    font-size: 50px;               /* Declaration 2 */
+    
+}
+h3 {
+    border-style: solid;
+    border-width: 5px;
+    border-color: green;
+  }
+#blue-border{
+    border-bottom-color: red;
+}
+
+body{ 
+    background-imge: url("https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg" );
+    background-size: cover;
+    background-repeat: no-repeat;
+    b
+
+}

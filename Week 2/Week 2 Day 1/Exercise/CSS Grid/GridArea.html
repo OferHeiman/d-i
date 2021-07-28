@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.container {
+    display: grid;
+    height: 200px;
+    width: 500px;
+    grid-gap: 2px;
+    grid-template-areas:
+    "header header header"
+    "sidebar content1 content3" 
+    "sidebar content2 content4" 
+    "footer footer footer";
+}
+.header {
+    grid-area: header;
+    background-color: aqua;
+}
+.sidebar {
+    background-color: yellow;
+    grid-area: sidebar;
+}
+.content1 {
+    background-color: green;
+    grid-area: content1;
+}
+.content2 {
+    background-color: purple;
+    grid-area: content2;
+}
+.content3 {
+    background-color: blue;
+    grid-area: content3;
+}
+.content4 {
+    background-color: brown;
+    grid-area: content4;
+}
+.footer {
+    background-color: gray;
+    grid-area: footer;
+    grid-row: 4/4;
+    grid-column: 1/4;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">Header</div>
+  <div class="sidebar">Sidebar</div>
+  <div class="content1">Content1</div>
+  <div class="content2">Content2</div>
+  <div class="content3">Content3</div>
+  <div class="content4">Content4</div>
+  <div class="footer">Footer</div>
+</div>
+</body>
+</html>

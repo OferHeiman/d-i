@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.container 
+{
+    display: grid;
+    height: 200px;
+    width: 500px;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    
+}
+.box1 {
+    text-align: center;
+    background-color: red;
+    color: white;
+    grid-column: 1 / span 2;
+
+
+}
+.box2 {
+    background-color: blue;
+    color: white;
+    grid-column: 3 / span 2;
+    
+}
+.box3 {
+    background-color: red;
+    color: white;
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 2;
+
+}
+.box4 {
+    background-color: blue;
+    color: white;
+    grid-column: 2 / span 3;
+}
+.box5 {
+    background-color: red;
+    color: white;
+    grid-column: 2 / span 3;
+}
+.box6 {
+    background-color: blue;
+    color: white;
+}
+.box7 {
+    background-color: yellow;
+    color: red;
+    grid-template-rows: 3fr;
+
+}
+.boxtop {
+    background-color: yellow;
+    color: green;
+    grid-template-rows: 3fr;
+    
+}
+.container2 {
+    display: grid;
+    height: 66PX;
+    width: 500px;
+    grid-gap: 10px;
+    margin-top: 5px;
+    grid-template-columns: 1fr;
+}
+
+.container3 {
+    display: grid;
+    height: 66PX;
+    grid-gap: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    grid-template-columns: 1fr;
+    width: 500px;
+    
+}
+</style>
+</head>
+<body>
+    <div class="container3"></div>
+    </div>
+<div class="container">
+  <div class="box1">header</div>
+  <div class="box2">hero</div>
+  <div class="box3">main content</div>
+  <div class="box4">4</div>
+  <div class="box5">5</div>
+  <div class="box6">6</div>
+</div>
+<div class="container2">
+    <div class="box7">Footer</div>
+</div>
+</body>
+</html>
