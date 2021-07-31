@@ -54,6 +54,5 @@ function isPlayer2LetterValid(ListOfPlayer2Letters) ////////////////////////////
         }
     } while (!isLetterNotValid)
     return Player2Letter;
-
 }
 

@@ -2,9 +2,9 @@
 let element=document.getElementById("navBar")
 element.setAttribute("id","socialNetworkNavigation")
 //2
-let li=document.createElement("li");
-li.appendChild(document.createTextNode("Logout"));
-element.firstElementChild.appendChild(li);
+let newli=document.createElement("li");
+newli.appendChild(document.createTextNode("Logout"));
+element.firstElementChild.appendChild(newli);
 //3
-element.firstElementChild.firstElementChild.textContent;
-element.firstElementChild.lastElementChild.textContent;
+console.log(element.firstElementChild.firstElementChild.textContent);
+console.log(element.firstElementChild.lastElementChild.textContent);
