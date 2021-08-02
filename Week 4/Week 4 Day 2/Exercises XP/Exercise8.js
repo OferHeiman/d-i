@@ -11,7 +11,7 @@ function billDetails() {
         tip = bill * 0.1;
     }
     let finalBill = bill + tip;
-    console.log("Tip amount: " + tip+"\nFinal bill amount: " + finalBill);
+    console.log("Tip amount: " + tip + "\nFinal bill amount: " + finalBill);
 }
 billDetails();
 
