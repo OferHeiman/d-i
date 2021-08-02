@@ -1,4 +1,4 @@
-let age = prompt("How old are you?"," ") //1
+let age = isAgeNumberValid(); //1
 function checkDriverAge(age) //2
 {
     if(age<18)
@@ -15,5 +15,19 @@ function checkDriverAge(age) //2
     }
 }
 
-checkDriverAge(age) //3
-checkDriverAge(25) //4
+function isAgeNumberValid() // checks if age is a number
+{
+let age;
+let isAgeNumberNotValid;
+do {
+    age = prompt("How old are you?"," ");
+    isAgeNumberNotValid = age.match(/^\d+$/gm);
+    if (!isAgeNumberNotValid) {
+        alert("Sorry," + age + " is not a valid age,please enter a valid age")
+    }
+} while (!isAgeNumberNotValid);
+return age;
+}
+
+checkDriverAge(age); //3
+checkDriverAge(25); //4

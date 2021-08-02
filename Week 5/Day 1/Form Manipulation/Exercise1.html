@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form1" onsubmit="getvalue()"> 
+        <label>First name: </label><input type="text" name="fname" value="David"><br> 
+        <label>Last name: </label><input type="text" name="lname" value="BenGurion"><br> 
+        <input type="submit" value="Submit"> 
+    </form> 
+    <script>
+        function getvalue()
+        {
+          let form = document.getElementById('form1');
+          let firstName = form.elements.fname.value;
+          let lastName = form.elements.lname.value;
+          alert('The full name is '+firstName+" "+lastName)
+        }
+        
+    </script>
+</body>

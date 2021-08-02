@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="select1"> 
+        <option value="apple">Middle School</option>
+        <option value="pear">University</option>
+        <option value="banana">College</option>
+    </select>
+    <button id="showSelected">Show Selected Option</button> 
+      
+      <script>
+        let dropdown = document.getElementById('select1')
+        let secondvalue=dropdown.options[1].textContent; //1
+        console.log(secondvalue);
+        let value1 = document.createElement('option'); //2
+        let value1text = document.createTextNode('Work')
+        value1.value = 'Work';
+        value1.appendChild(value1text);
+        dropdown.appendChild(value1);
+        let value2 = document.createElement('option'); //3
+        let value2text = document.createTextNode('Primary School')
+        value2.appendChild(value2text);
+        value1.value = 'Primary School';
+        dropdown.appendChild(value2);
+        dropdown.add(value2,0);
+        dropdown.options[3].selected = true; //4
+
+        let button=document.getElementById('showSelected'); //5
+        button.onclick = function() {
+            alert(dropdown.selectedOptions[0].textContent);
+        }
+      </script>
+      
+</body>

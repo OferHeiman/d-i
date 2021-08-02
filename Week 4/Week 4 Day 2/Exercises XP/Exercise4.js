@@ -11,4 +11,4 @@ function isDivisible(divisor)
     }
     console.log(sum) 
 }
-isDivisible(100) 
+isDivisible(23); 

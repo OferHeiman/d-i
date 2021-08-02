@@ -1,0 +1,22 @@
+<html>
+<body>
+    <button id="jsstyle">Style</button> 
+
+    <script>
+        let x = document.getElementById("jsstyle")
+        let y = document.getElementById("jsstyle")
+        x.addEventListener("click", XRespondClick); 
+        y.addEventListener("click", YRespondClick); 
+
+        function XRespondClick(e) { 
+            x.style.backgroundColor='red';
+            alert("x is Clicked")
+           e.stopPropagation()
+        } 
+        function YRespondClick(e) { 
+            y.style.padding="5px";
+            alert("y is Clicked")
+        } 
+    </script>
+</body>
+</html>
