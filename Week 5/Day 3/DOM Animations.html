@@ -1,0 +1,33 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let counter = 10;
+        let banner = document.createElement("div");
+        banner.textContent = "the sale ends in " + counter + " mins!";
+        banner.style.backgroundColor = "red";
+        banner.style.color = "blue";
+        document.body.appendChild(banner);
+        banner.addEventListener("onpageload", appear)
+        function appear() {
+            if (counter === 0) {
+                clearInterval(id);
+                banner.textContent = "the sale is over"
+                return;
+            }
+            banner.textContent = "the sale ends in " + counter + " mins!";
+            counter--;
+        }
+        let id = setInterval(appear, 1000);
+
+    </script>
+</body>
+
+</html>
