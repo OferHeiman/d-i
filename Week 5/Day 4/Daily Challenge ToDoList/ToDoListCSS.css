@@ -1,0 +1,50 @@
+/* input[type=submit]
+{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+  } */
+
+  input[type="text"] {
+    width: 200px;
+    height: 20px;
+    padding-right: 50px;
+}
+
+input[type="submit"] {
+    margin-left: -50px;
+}
+
+h1
+{
+    text-align: center;
+}
+
+.form
+{
+    text-align: center;
+}
+body
+{
+    background: rgb(2,0,36);
+background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+}
+.listTasks
+{ 
+    text-align: center;
+    position: fixed;
+    top: 100px;
+    left: 533px;
+    width: 200px;
+    height: 35%;
+    background-color:white;
+}
+#Xbutton
+{
+    background: rgb(2,0,36);
+background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 70%, rgba(0,212,255,1) 100%);
+}

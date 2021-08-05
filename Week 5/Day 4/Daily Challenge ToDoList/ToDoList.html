@@ -1,0 +1,56 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList</title>
+    <link rel="stylesheet" href="ToDoListCSS.css">
+</head>
+
+<body>
+    <form class="form">
+        <label><h1>TO-DO-LIST</h1></label>
+        <input type="text" id="input1Text" name="input1Text" placeholder="new task">
+        <input type="submit" value="ADD" id="submit" onclick="addTask();">
+    </form>
+    <div class="listTasks"></div>
+    <script>
+        let listTasks = [];
+        function addTask() {
+            let br = document.createElement("br");
+            let form = document.querySelector('form');
+            let Input1Text = form.elements.input1Text.value;
+            if (Input1Text.length == 0) {
+                alert("Field is empty");
+                return;
+            }
+            listTasks.push(Input1Text);
+            //x
+            let Xbutton = document.createElement("label")
+           Xbutton.textContent = "X";
+           Xbutton.id="Xbutton";
+           Xbutton.style.color='white';
+            //checkbox
+            let newinput = document.createElement("input");
+            newinput.type = "checkbox";
+            newinput.id = "newtask";
+            newinput.value = Input1Text;
+            //creating the new task
+            let newinputtext = document.createElement("label")
+            newinputtext.htmlFor = "newtask";
+            newinputtext.appendChild(document.createTextNode(Input1Text))
+            //adding new task
+            let div = document.querySelector('div');
+            div.appendChild(Xbutton);
+            div.appendChild(newinput);
+            div.appendChild(newinputtext);
+            div.appendChild(br);
+            //prevent page reload
+            event.preventDefault();
+        }
+
+    </script>
+</body>
+
+</html>

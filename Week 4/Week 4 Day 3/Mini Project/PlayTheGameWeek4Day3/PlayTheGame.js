@@ -8,11 +8,11 @@ function playTheGame() {
     let isNotValidNumber;
     for (let i = 0; i < 3; i++) {
         do {
-            userNumber = parseInt(prompt("Please enter a number between 0 and 10"))
+            userNumber = parseInt(prompt("Please enter a number between 0 and 10"));
             isNotValidNumber = !userNumber || userNumber > 10 || userNumber < 0;
             isNotValidNumber = userNumber == 0 ? false : isNotValidNumber;
             if (isNotValidNumber) {
-                alert("Sorry," + userNumber + " is not a valid number, please enter a number between 0 and 10")
+                alert("Sorry," + userNumber + " is not a valid number, please enter a number between 0 and 10");
             }
         }
         while (isNotValidNumber);
