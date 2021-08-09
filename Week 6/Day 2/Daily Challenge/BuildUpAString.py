@@ -5,7 +5,7 @@ while not user_string_length == 10:
     user_string = input("Please type a 10 characters long string ")
     user_string_length = len(user_string)
     
-print(user_string[0]+user_string[user_string_length-1]) #2
+print(user_string[0]+user_string[9]) #2
 
 word_construction = "" #3
 for i in user_string:
@@ -13,4 +13,4 @@ for i in user_string:
     print(word_construction)
 
 import random
-print(''.join(random.sample(user_string,user_string_length)))
+print(''.join(random.sample(user_string,10)))
