@@ -68,9 +68,9 @@ for i in range(is_leap_year+1):
         for _ in range(num_candles):
             print("i", end="")
         print("_")
-    print("   |:H:a:p:p:y:|")
-    print(" __|___________|__")
-    print("|^^^^^^^^^^^^^^^^^|")
-    print("|:B:i:r:t:h:d:a:y:|")
-    print("|                 |")
-    print("~~~~~~~~~~~~~~~~~~~")
+    print('''   |:H:a:p:p:y:|
+ __|___________|__
+|^^^^^^^^^^^^^^^^^|
+|:B:i:r:t:h:d:a:y:|
+|                 |
+~~~~~~~~~~~~~~~~~~~''')
