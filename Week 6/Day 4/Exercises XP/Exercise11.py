@@ -1,4 +1,4 @@
-family_ages = input("What are the ages of everyone who wants a ticket in the family?")
+family_ages = input("What are the ages of everyone who wants a ticket in the family?(separate the ages with a space)")
 family_ages_list = list(map(int,family_ages.split(' ')))
 total_price = 0
 for i in range(0,len(family_ages_list)):
