@@ -1,0 +1,99 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise1</title>
+</head>
+
+<body>
+    <article>
+        <h1> Some Facts </h1>
+        <h2> The Chocolate </h2>
+        <h3>History of the chocolate</h3>
+        <button type="button" onclick="boldText();">bold text</button>
+        <p> Chocolate is made from tropical Theobroma cacao tree seeds.
+            Its earliest use dates back to the Olmec civilization in Mesoamerica.</p>
+        <p> After the European discovery of the Americas, chocolate became
+            very popular in the wider world, and its demand exploded. </p>
+        <p> Chocolate has since become a popular food product that millions enjoy every day,
+            thanks to its unique, rich, and sweet taste.</p>
+        <p> But what effect does eating chocolate have on our health?</p>
+    </article>
+    <form>
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname"><br><br>
+        <input type="submit" value="Submit" id="submit" onclick="userAnswerTable();">
+    </form>
+    <div class="usersAnswer"></div>
+    <script>
+        //1
+        document.querySelector('article').lastElementChild.remove();
+        //2
+        let h2backgroundcolor = document.querySelector('h2');
+        h2backgroundcolor.addEventListener("click", h2backgroundColorchange);
+        function h2backgroundColorchange() {
+            h2backgroundcolor.style.backgroundColor = 'red';
+        }
+        //3
+        let h1fontsize = document.querySelector('h1');
+        h1fontsize.addEventListener("click", h1fontsizerandomchange);
+        function h1fontsizerandomchange() {
+            h1fontsize.style.fontSize = Math.floor(Math.random() * 101);
+        }
+        //4
+        let h3Hide = document.querySelector('h3');
+        h3Hide.addEventListener("click", h3Hider);
+        function h3Hider() {
+            h3Hide.style.display = 'none';
+        }
+        //5
+        function boldText() {
+            let paragraphs = document.querySelectorAll('p');
+            for (let i = 0; i < paragraphs.length; i++) {
+                paragraphs[i].style.fontWeight = "bold";
+            }
+        }
+        //6
+        function userAnswerTable() {
+            let form = document.querySelector('form');
+            let firstName = form.elements.fname.value;
+            let lastName = form.elements.lname.value;
+            let table = document.createElement("table");
+            let tr = document.createElement('tr');
+            let td = document.createElement('td');
+            let td2 = document.createElement('td');
+            td.style.border = "1px solid";
+            td2.style.border = "1px solid";
+            td.textContent = firstName;
+            td2.textContent = lastName;
+            tr.appendChild(td);
+            tr.appendChild(td2);
+            table.appendChild(tr);
+            table.style.border = "1px solid";
+            let div = document.querySelector('div');
+            div.appendChild(table);
+            event.preventDefault();
+        }
+        //7
+        let paragraph2 = document.querySelectorAll('p')[1];
+        paragraph2.addEventListener('mouseover', fadeOutEffect);
+        function fadeOutEffect() {
+            let fadeEffect = setInterval(function () {
+                if (!paragraph2.style.opacity) {
+                    paragraph2.style.opacity = 1;
+                }
+                if (paragraph2.style.opacity > 0) {
+                    paragraph2.style.opacity -= 0.1;
+                } else {
+                    clearInterval(fadeEffect);
+                }
+            }, 200);
+        }
+    </script>
+</body>
+
+</html>

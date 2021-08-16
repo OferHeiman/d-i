@@ -16,7 +16,7 @@ for i in range(0,len(users)):
     disney_users_C[users[i]]=i
 print(disney_users_C)
 
-# Question 4 is unclear,do i need two new results or only one? i wrote both just incase
+# Question 4 is unclear,do i need two new results or only one? i wrote both just in case
 # Only recreate the 1st result for:
 # The characters, which names contain the letter “i”.
 # The characters, which names start with the letter “m” or “p”.
