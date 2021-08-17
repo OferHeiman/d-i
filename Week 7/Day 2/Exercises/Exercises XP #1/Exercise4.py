@@ -1,6 +1,5 @@
 from random import randrange
-import re
-def same_number(user_number):
+def same_number(user_number: int):
     computer_number = randrange(1,101)
     if user_number == computer_number:
         print("Success")
