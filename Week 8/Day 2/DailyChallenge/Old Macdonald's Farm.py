@@ -11,8 +11,7 @@ class Farm():
             self.animals[animal] = amount
 
     def get_info(self):
-        for animal, amount in self.animals.items():
-            print(f'{animal} : {amount}')
+        [print(f'{animal} : {amount}') for animal,amount in self.animals.items()]
         print('\n    E-I-E-I-0!')
     
     def get_animal_types(self):
