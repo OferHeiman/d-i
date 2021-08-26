@@ -1,14 +1,14 @@
 from game import Game
 
 def get_user_menu_choice():
-    choice = input('''What do you want to do?
+    choice = input('''Menu:
     (g)Play a new game
     (s)Show scores
     (q)Quit
     Type here: ''')
     while True:
          if choice not in ('g','s','q'):
-            choice = input('''Invalid input,What do you want to do?
+            choice = input('''Invalid input,Menu:
             (g)Play a new game
             (s)Show scores
             (q)Quit
@@ -42,7 +42,7 @@ def main():
              user_item = game.get_user_item()
              computer_item = game.get_computer_item()
              result = game.get_game_result(user_item,computer_item)
-             print(f"You chose:{user_item}, The computer chose:{computer_item}.\n the result is:{result}")
+             print(f"You chose: {user_item}, The computer chose: {computer_item}.\nthe result is: {result}")
              if result == 'win':
                  won += 1
              elif result == 'draw':
