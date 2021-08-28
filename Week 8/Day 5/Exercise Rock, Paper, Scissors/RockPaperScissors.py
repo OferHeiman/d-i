@@ -34,7 +34,7 @@ def main():
          results = {"win": won,"lost": lost,"drew": drew}
          menu = get_user_menu_choice()
          if menu == 'q':
-            return print('Thank you for playing!')
+            return 'Thank you for playing!'
          elif menu == 's':
              print_results(results)
          else:
