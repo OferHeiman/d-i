@@ -1,0 +1,25 @@
+What is a class?
+a class is an object with his own attributes and methods.
+
+What is an instance?
+an instance is a stand-alone occurrence of any object.
+
+What is encapsulation?
+Encapsulation is a way to give a class private variables and attributes,and the ability to change them from the outside using get\set methods.
+
+What is abstraction?
+abstraction is used to give the user a function but hide the inner functionality of it.
+the user knows what the function does,but he doesn't know how it does it.
+
+What is inheritance?
+inheritance allows us to define a class that inherits all the attributes and methods of another class.
+
+What is multiple inheritance?
+multiple inheritance is the same as normal inheritance,but it allows your to inherits from more than one class.
+
+What is polymorphism?
+polymorphism means many forms,so different classes can you the same function name but for different functions.
+for example a dog class and a cat class can both have a 'sound' function,but each will make a different sound.
+
+What is method resolution order or MRO?
+MRO is the order in which a class will look for an attribute or method that is involved in multiple inheritances.
