@@ -3,6 +3,7 @@ class Character():
         self.name = name
         self.life = life
         self.attack = attack
+        print(f"You created a {self.__class__.__name__} Character named {self.name},with {self.life} life and {self.attack} attack.")
     
 
     def basic_attack(self,Character2):
@@ -12,10 +13,6 @@ class Character():
 
 
 class Druid(Character):
-    def __init__(self, name, life, attack) -> None:
-        super().__init__(name, life=life, attack=attack)
-        print("You created a Druid")
-    
     def meditate(self):
         print(f"Before meditating: {self.name} life: {druid1.life} {self.name} attack: {druid1.attack}")
         self.life += 10
@@ -36,11 +33,6 @@ class Druid(Character):
 
 
 class Warrior(Character):
-    def __init__(self, name, life, attack) -> None:
-        super().__init__(name, life=life, attack=attack)
-        print("You created a Warrior")
-    
-
     def brawl(self,Character2):
         print(f"Before brawl: {Character2.name} life: {Character2.life}")
         print(f"Before brawl: {self.name} life: {self.life}")
@@ -64,11 +56,6 @@ class Warrior(Character):
     
 
 class Mage(Character):
-    def __init__(self, name, life, attack) -> None:
-        super().__init__(name, life=life, attack=attack)
-        print("You created a Mage")
-
-
     def curse(self,Character2):
         print(f"Before curse: {Character2.name} attack: {Character2.attack}")
         Character2.attack -= 2
@@ -86,7 +73,7 @@ class Mage(Character):
         Character2.life -= (self.attack/self.life)
 
 
-druid1 = Druid('Drud',75,4)
+druid1 = Druid('Ballar',75,4)
 warrior1 = Warrior('Ares',100,5)
 mage1 = Mage('Hecubah',50,10)
 druid1.meditate()
