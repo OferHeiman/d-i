@@ -38,7 +38,7 @@ class Node:
 
     def search(self,value):
         if self.value == value:
-            return print(f"Found the node: {self}")
+            return print(f"The node with the value {value} is: {self}") 
         if value>self.value:
             if self.right:
                 self.right.search(value)
