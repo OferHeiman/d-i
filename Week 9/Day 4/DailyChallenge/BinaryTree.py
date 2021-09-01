@@ -38,18 +38,17 @@ class Node:
 
     def search(self,value):
         if self.value == value:
-            return self
-        else:
-            if value>self.value:
-                if self.right:
-                    self.right.search(self,value)
-                else:
-                    return "Value doesn't exist in this tree"
-            else: 
-                if self.left:
-                    self.left.search(self,value)
-                else:
-                   return "Value doesn't exist in this tree"
+            return print(f"Found the node: {self}")
+        if value>self.value:
+            if self.right:
+                self.right.search(value)
+            else:
+                return print("Value doesn't exist in this tree")
+        else: 
+            if self.left:
+                self.left.search(value)
+            else:
+                return print("Value doesn't exist in this tree")
 
 
     #display is a recursive function to display a binary tree,copied from https://stackoverflow.com/questions/34012886/print-binary-tree-level-by-level-in-python
@@ -120,4 +119,5 @@ root.add_node(node_6)
 root.add_node(node_1)
 root.add_node(node_7)
 root.add_node(node_4)
+root.search(8)
 root.display()
