@@ -52,13 +52,13 @@ class Node:
                    return "Value doesn't exist in this tree"
 
 
-    #display function is arecursive way to display a binary tree,copied from https://stackoverflow.com/questions/34012886/print-binary-tree-level-by-level-in-python
+    #display is a recursive function to display a binary tree,copied from https://stackoverflow.com/questions/34012886/print-binary-tree-level-by-level-in-python
     def display(self):
-        lines, *_ = self._display_aux()
+        lines, *_ = self.display_aux()
         for line in lines:
             print(line)
 
-    def _display_aux(self):
+    def display_aux(self):
         """Returns list of strings, width, height, and horizontal coordinate of the root."""
         # No child.
         if self.right is None and self.left is None:
@@ -70,7 +70,7 @@ class Node:
 
         # Only left child.
         if self.right is None:
-            lines, n, p, x = self.left._display_aux()
+            lines, n, p, x = self.left.display_aux()
             s = '%s' % self.value
             u = len(s)
             first_line = (x + 1) * ' ' + (n - x - 1) * '_' + s
@@ -80,7 +80,7 @@ class Node:
 
         # Only right child.
         if self.left is None:
-            lines, n, p, x = self.right._display_aux()
+            lines, n, p, x = self.right.display_aux()
             s = '%s' % self.value
             u = len(s)
             first_line = s + x * '_' + (n - x) * ' '
@@ -89,8 +89,8 @@ class Node:
             return [first_line, second_line] + shifted_lines, n + u, p + 2, u // 2
 
         # Two children.
-        left, n, p, x = self.left._display_aux()
-        right, m, q, y = self.right._display_aux()
+        left, n, p, x = self.left.display_aux()
+        right, m, q, y = self.right.display_aux()
         s = '%s' % self.value
         u = len(s)
         first_line = (x + 1) * ' ' + (n - x - 1) * '_' + s + y * '_' + (m - y) * ' '
