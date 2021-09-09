@@ -1,12 +1,12 @@
 class Door():
-    objs = 0
+    objs = 1
     next = []
     keys = abs(int(input("How many keys do you have? ")))
     def __init__(self,locked:bool):
-        Door.objs += 1
         self.locked = locked
         self.id = Door.objs
         self.next.append(self)
+        Door.objs += 1
     
     def can_go_to(self,other_door):
         if self.id>other_door.id:
