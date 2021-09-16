@@ -22,7 +22,7 @@ class AnagramChecker():
         return anagrams_list
 
 
-# word_list = open('GIT\Week 10\Day 5\sowpods.txt','r').read().splitlines()
+# word_list = open('GIT\Week 10\Day 5\Exercises\Anagram Checker\sowpods.txt','r').read().splitlines()
 # anagram = AnagramChecker(word_list)
 # print(anagram.is_valid_word('ABACTERIAL'))
 # print(anagram.is_anagram('wadu','duaw'))
