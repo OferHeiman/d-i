@@ -2,7 +2,7 @@ import string
 import re
 import nltk
 from nltk.corpus import stopwords
-# nltk.download('stopwords')
+nltk.download('stopwords')
 
 class Text():
     def __init__(self,text_file) -> None:
