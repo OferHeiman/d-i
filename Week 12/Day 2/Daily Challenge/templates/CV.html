@@ -1,0 +1,52 @@
+{% block content %}
+<div class="contact">
+    <h3>Your CV</h3>
+    <form action="{{ url_for('get_CV') }}" method=post>
+        <div>
+            <!-- name forms -->
+            <p>
+                {{ form.name.label }} <br>
+                {{ form.name(placeholder='Your name') }}
+            </p>
+            <!-- age forms -->
+            <p>
+                {{ form.age.label }} <br>
+                {{ form.age(placeholder='Your age') }}
+            </p>
+            <!-- phone forms -->
+            <p>
+                {{ form.phone.label }} <br>
+                {{ form.phone(placeholder='Your phone number') }}
+            </p>
+            </p>
+            <!-- email forms -->
+            <p>
+                {{ form.email.label }} <br>
+                {{ form.email(placeholder='Your e-mail ...') }}
+            </p>
+            <!-- experience forms -->
+            <p>
+                {{ form.experience.label }}<br>
+                {{ form.experience(placeholder='Write about your past experience',rows='10',cols='127')}}
+            </p>
+            <!-- education forms -->
+            <p>
+                {{ form.education.label }}<br>
+                {{ form.education(placeholder='What is your education?',rows='10',cols='127') }}
+            </p>
+            <!-- Submit button -->
+            <p>
+                {{ form.submit }}
+            </p>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{url_for('.static', filename='styles.css')}}">
+{% endblock %}
+
+
+
