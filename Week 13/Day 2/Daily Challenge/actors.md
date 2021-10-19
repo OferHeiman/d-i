@@ -1,8 +1,11 @@
 1:
 
 SELECT
+
    COUNT(*)
+
 FROM
+
    actors;
 
 
@@ -11,6 +14,7 @@ FROM
 If i try to add a new actor with a blank field i think i will get an error that a field is missing.
 
 INSERT INTO actors (first_name, last_name, age, number_oscars)
+
 VALUES('Leonardo','Dicaprio','11/11/1974');
 
 result:
