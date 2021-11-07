@@ -1,0 +1,120 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='navbar.css') }}">
+
+<nav class="navbar sticky-top navbar-expand-lg" style="height: 30px; margin-left: 300px">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+          <a class="nav-link" style="color: #8A8A8A; font-weight: bold; font-size:12px; margin-top: 2px" href="{{url_for('deleteads')}}" >Cryptocurrencies: {{ "{:,.0f}".format(cryptodata['total_cryptocurrencies']) }}</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" href="{{url_for('fakeads')}}" style="color: #8A8A8A; font-weight: bold; font-size:12px; margin-top: 2px ;margin-left: 351px">Market Cap: ${{ "{:,.0f}".format(cryptodata['quote']['USD']['total_market_cap']) }}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" style="color: #8A8A8A; font-weight: bold; font-size:12px; margin-top: 2px; margin-left: 351px">24h Vol: ${{ "{:,.0f}".format(cryptodata['quote']['USD']['total_volume_24h']) }}</a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</div>
+</nav>
+
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark shadow-sm" style="background: #1C89FF; font-weight: bold">
+  <div class="container-fluid">
+    <a href="{{url_for('index')}}">
+      <img style="height: 50px; width: auto;margin-left:300px" src="{{ url_for('static', filename='favicon.ico') }}">
+      </a>
+    <a class="navbar-brand" style="margin-right: 5px; font-size: 32px" href="{{url_for('index')}}">CoinWorld</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        {% if not current_user.is_authenticated %}
+        <li class="nav-item">
+          <a style="margin-left: 843px" class="nav-link" href="{{url_for('login')}}" >Login</a>
+        </li>
+        {% else %}
+        <li class="nav-item">
+          <a style="margin-left: 843px" class="nav-link" href="{{url_for('logout')}}" >Logout</a>
+        </li>
+        {% endif %}
+        {% if not current_user.is_authenticated %}
+        <li class="nav-item">
+          <a class="nav-link" href="{{url_for('signup')}}" >Signup</a>
+        </li>
+        {% endif %}
+        {% if current_user.is_authenticated %}
+        <li class="nav-item">
+          <a class="nav-link" href="{{url_for('profile')}}" >Profile</a>
+        </li>
+      {% endif %}
+      </ul>
+    <form action="{{ url_for('search') }}" >
+      <button style="margin-bottom: 5px" type="submit" class="btn btn-light border">Search</button>
+      <input class="search-query" data-provide="typeahead" data-items="4" type="text" placeholder="  Search Marketplace" name="search" style="background-color: white; border-radius: 10px; margin-top:10px; margin-left:13px">
+    </form>
+
+    </div>
+  </div>
+</div>
+</nav>
+
+<!--<div class="sidebar-container">-->
+<!--  <div class="search-container" >-->
+<!--    <form action="{{ url_for('search') }}" >-->
+<!--      <input class="search-query" data-provide="typeahead" data-items="4" type="text" placeholder="  Search Marketplace" name="search" style="background-color: white; border-radius: 10px; margin-top:10px; margin-left:13px">-->
+<!--      <button style="margin-top:15px;margin-bottom:10px; margin-left:65px"type="submit" class="btn btn-dark border">Search</button>-->
+<!--    </form>-->
+<!--  </div>-->
+<!--    </li>-->
+<!--  <ul class="sidebar-navigation">-->
+<!--    <li>-->
+<!--<a style="font-weight: bold" class="nav-link" href="{{url_for('signup')}}">Create New Ad</a>-->
+<!--    </li>-->
+<!--        <li class="header" style="font-weight: bold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Categories</li>-->
+<!--        <li>-->
+<!--<a style="font-weight: bold" class="nav-link" href="/category/Vehicles">>Vehicles</a>-->
+<!--    </li>-->
+<!--            <li>-->
+<!--<a style="font-weight: bold" class="nav-link" href="/category/Real Estate">>Real Estate</a>-->
+<!--    </li>-->
+<!--    <li>-->
+<!--<a style="font-weight: bold" class="nav-link" href="/category/Apparel">>Apparel</a>-->
+<!--    </li>-->
+<!--            <li>-->
+<!--<a style="font-weight: bold" class="nav-link" href="/category/Electronics">>Electronics</a>-->
+<!--    </li>-->
+<!--            <li>-->
+<!--<a style="font-weight: bold" class="nav-link" href="/category/Home Goods">>Home Goods</a>-->
+<!--    </li>-->
+<!--            <li>-->
+<!--<a style="font-weight: bold" class="nav-link" href="/category/Musical Instruments">>Musical Instruments</a>-->
+<!--    </li>-->
+<!--            <li>-->
+<!--<a style="font-weight: bold" class="nav-link" href="/category/Office Supplies">>Office Supplies</a>-->
+<!--    </li>-->
+<!--            <li>-->
+<!--<a style="font-weight: bold" class="nav-link" href="/category/Sporting Goods">>Sporting Goods</a>-->
+<!--    </li>-->
+<!--            <li>-->
+<!--<a style="font-weight: bold" class="nav-link" href="/category/Toys & Games">>Toys & Games</a>-->
+<!--    </li>-->
+<!--            <li>-->
+<!--<a style="font-weight: bold" class="nav-link" href="/category/Hobbies">>Hobbies</a>-->
+<!--    </li>-->
+<!--            <li>-->
+<!--<a style="font-weight: bold" class="nav-link" href="/category/Family">>Family</a>-->
+<!--    </li>-->
+<!--            <li>-->
+<!--<a style="font-weight: bold" class="nav-link" href="/category/Entertainment">>Entertainment</a>-->
+<!--    </li>-->
+<!--                  <li>-->
+<!--<a style="font-weight: bold" class="nav-link" href="/category/Other">>Other</a>-->
+<!--    </li>-->
+<!--  </ul>-->
+<!--</div>-->
