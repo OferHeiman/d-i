@@ -44,7 +44,7 @@ def person_info_phonenumber(phonenumber):
     except:
         return render_template_string('no results found for ' + phonenumber)
     person = models.Person.query.filter_by(id=person_id_by_phonenumber).first()
-    person_phone_numbers = models.Phonenumber.query.filter_by(owner=person_id_by_phonenumber).all()
+    person_phone_numbers = person.phonenumbers
     return render_template('personbyphonenumber.html', person=person, person_phone_numbers=person_phone_numbers)
 
 
