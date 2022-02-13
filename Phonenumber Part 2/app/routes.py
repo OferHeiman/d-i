@@ -78,5 +78,8 @@ def person_info_name(name):
 
 @app.route('/people/<nationality>')
 def people_with_nationality(nationality):
-    all_people_with_nationality = models.Nationality.query.filter_by(name=nationality).all()[0]
+    try:
+        all_people_with_nationality = models.Nationality.query.filter_by(name=nationality).all()[0]
+    except:
+        return render_template_string('no results found for ' + nationality + ', maybe you missed an uppercase?')
     return render_template('peoplebynationality.html', all_people_with_nationality=all_people_with_nationality)
