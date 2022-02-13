@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>people by nationality</title>
+        <style>
+        table, th, td {
+  border:1px solid black;
+}
+    </style>
+</head>
+<body>
+<table>
+  <tr>
+    <th>id</th>
+    <th>name</th>
+    <th>email</th>
+    <th>address</th>
+    <th>phone numbers</th>
+    <th>nationalities</th>
+  </tr>
+    {% for person in all_people_with_nationality.people %}
+  <tr>
+    <td>{{ person.id }}</td>
+    <td>{{ person.name }}</td>
+    <td>{{ person.email }}</td>
+    <td>{{ person.address }}</td>
+    <td>{% for phonenumber in person.phonenumbers %}
+        {{ phonenumber.number }},
+        {% endfor %}
+    </td>
+      <td>
+          {% for nationality in person.nationalities %}
+          {{ nationality.name }}
+          {% endfor %}
+      </td>
+  </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>

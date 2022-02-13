@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <style>
+        table, th, td {
+  border:1px solid black;
+}
+    </style>
+    <meta charset="UTF-8">
+    <title>Phone Number</title>
+</head>
+<body>
+<a href="{{ url_for('fakeperson') }}"> add fake person </a>
+<br>
+<a href="{{ url_for('fakephonenumber') }}"> add fake phonenumber to random person </a>
+<br>
+<a href="{{ url_for('add_nationality') }}"> add nationality </a>
+<br>
+<a href="{{ url_for('add_nationality_to_random_person') }}"> add nationality to random person </a>
+<br><br>
+people table:
+<table>
+  <tr>
+    <th>id</th>
+    <th>name</th>
+    <th>email</th>
+    <th>address</th>
+    <th>phone numbers</th>
+    <th>nationalities</th>
+  </tr>
+    {% for person in all_people %}
+  <tr>
+    <td>{{ person.id }}</td>
+    <td><a href="/person1/{{ person.name }}">{{ person.name }}</a></td>
+    <td>{{ person.email }}</td>
+    <td>{{ person.address }}</td>
+    <td>{% for phonenumber in person.phonenumbers %}
+          {{ phonenumber.number }},
+          {% endfor %}
+    </td>
+    <td>{% for nationality in person.nationalities %}
+        <a href="/people/{{ nationality.name }}">{{ nationality.name }}</a>,
+          {% endfor %}
+    </td>
+  </tr>
+        {% endfor %}
+</table>
+<br>
+phone numbers table:
+<table>
+  <tr>
+    <th>id</th>
+    <th>number</th>
+    <th>owner id</th>
+  </tr>
+    {% for phonenumber in all_phonenumbers %}
+  <tr>
+    <td>{{ phonenumber.id }}</td>
+      <td><a href="/person/{{ phonenumber.number }}">{{ phonenumber.number }}</a></td>
+    <td>{{ phonenumber.owner }}</td>
+  </tr>
+        {% endfor %}
+</table>
+<br>
+nationality table:
+<table>
+  <tr>
+    <th>id</th>
+    <th>name</th>
+  </tr>
+    {% for nationality in all_nationalities %}
+  <tr>
+    <td>{{ nationality.id }}</td>
+    <td><a href="/people/{{ nationality.name }}">{{ nationality.name }}</a></td>
+  </tr>
+        {% endfor %}
+</table>
+</body>
+</html>

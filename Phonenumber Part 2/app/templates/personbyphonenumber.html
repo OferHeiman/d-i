@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>person by phone number</title>
+    <style>
+        table, th, td {
+  border:1px solid black;
+}
+    </style>
+</head>
+<body>
+{{ test }}
+<table>
+  <tr>
+    <th>id</th>
+    <th>name</th>
+    <th>email</th>
+    <th>address</th>
+    <th>phone numbers</th>
+  </tr>
+  <tr>
+    <td>{{ person.id }}</td>
+    <td>{{ person.name }}</td>
+    <td>{{ person.email }}</td>
+    <td>{{ person.address }}</td>
+    <td>{% for phonenumber in person_phone_numbers %}
+        {{ phonenumber.number }},
+        {% endfor %}
+    </td>
+  </tr>
+</table>
+</body>
+</html>
