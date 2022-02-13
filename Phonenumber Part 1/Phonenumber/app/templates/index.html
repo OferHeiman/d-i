@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <style>
+        table, th, td {
+  border:1px solid black;
+}
+    </style>
+    <meta charset="UTF-8">
+    <title>Phone Number</title>
+</head>
+<body>
+<a href="{{ url_for('fakeperson') }}"> add fake person </a>
+<br>
+<a href="{{ url_for('fakephonenumber') }}"> add fake phonenumber to random person </a>
+<br><br>
+<table>
+  <tr>
+    <th>id</th>
+    <th>name</th>
+    <th>email</th>
+    <th>address</th>
+  </tr>
+    {% for person in all_people %}
+  <tr>
+    <td>{{ person.id }}</td>
+    <td><a href="/person1/{{ person.name }}">{{ person.name }}</a></td>
+    <td>{{ person.email }}</td>
+    <td>{{ person.address }}</td>
+  </tr>
+        {% endfor %}
+</table>
+
+<table>
+  <tr>
+    <th>id</th>
+    <th>number</th>
+    <th>owner id</th>
+  </tr>
+    {% for phonenumber in all_phonenumbers %}
+  <tr>
+    <td>{{ phonenumber.id }}</td>
+      <td><a href="/person/{{ phonenumber.number }}">{{ phonenumber.number }}</a></td>
+    <td>{{ phonenumber.owner }}</td>
+  </tr>
+        {% endfor %}
+</table>
+</body>
+</html>
