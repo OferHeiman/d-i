@@ -23,8 +23,8 @@
     <td>{{ person.name }}</td>
     <td>{{ person.email }}</td>
     <td>{{ person.address }}</td>
-    <td>{% for number in person_phone_numbers %}
-        {{ number.number }},
+    <td>{% for phonenumber in person_phone_numbers %}
+        {{ phonenumber.number }},
         {% endfor %}
     </td>
   </tr>
